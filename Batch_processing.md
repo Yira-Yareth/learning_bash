@@ -56,3 +56,36 @@ Notice these things about the loop:
  4.-The body of the loop that does the processing (in our case, echo $filetype).
 
 Notice that the body uses **$filetype** to get the variable's value instead of just filetype, just like it does with any other shell variable. Also notice where the semi-colons go: the first one comes between the list and the keyword *do*, and the second comes between the body and the keyword *done*.
+
+
+### Loop with wildcards
+
+```shell
+for filename in people/*; do echo $filename; done
+```
+
+### Loops with many commands
+
+Printing filenames is useful for debugging, but the real purpose of loops is to do things with multiple files. This loop prints the second line of each data file:
+
+```shell
+for file in seasonal/*.csv; do head -n 2 $file | tail -n 1; done
+```
+
+It has the same structure as the other loops you have already seen: all that's different is that its body is a pipeline of two commands instead of a single command.
+
+Write a loop that prints the last entry from July 2017 (2017-07) in every seasonal file. It should produce a similar output to:
+
+```shell
+for file in seasonal/*; do grep 2017-07 $file | tail -n 1; done
+```
+
+A loop can contain any number of commands.To tell the shell where one ends and the next begins, you must separate them with semi-colons:
+
+```shell
+for f in seasonal/*.csv; do echo $f; head -n 2 $f | tail -n 1; done
+```
+
+
+
+
