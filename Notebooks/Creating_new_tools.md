@@ -49,3 +49,19 @@ bash headers.sh
 ```
 
 This tells the shell (which is just a program called bash) to run the commands contained in the file headers.sh, which produces the same output as running the commands directly.
+
+
+## Pass filenames to scripts
+A script that processes specific files is useful as a record of what you did, but one that allows you to process any files you want is more useful. To support this, you can use the special expression $@ (dollar sign immediately followed by at-sign) to mean "all of the command-line parameters given to the script".
+
+For example, if unique-lines.sh contains sort $@ | uniq, when you run:
+```shell
+bash unique-lines.sh seasonal/summer.csv
+```
+the shell replaces *$@* with *seasonal/summer*.csv and processes one file. If you run this:
+
+```shell
+bash unique-lines.sh seasonal/summer.csv seasonal/autumn.csv
+```
+
+it processes two data files, and so on.
