@@ -1,0 +1,15 @@
+#This script echo de variable inside an message
+
+#To see the entire instructions please see the exerciese with the same name in the notebook of this folder
+
+
+#Create te required variable
+
+yourname="Sam"
+
+
+#Print out the assigned name
+
+echo "Hi there, $yourname welcome to the website!"
+
+
