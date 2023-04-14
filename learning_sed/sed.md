@@ -1,8 +1,8 @@
-#Sed
+# Sed
 
 The command name **sed** is derived from stream editor
 
-!!!  Please see the scripts with the same subtitle name to see exercies for a better undestandig
+> Please see the scripts with the same subtitle name to see exercies for a better undestandig
 
 ## 1.- Editing standard input
 
