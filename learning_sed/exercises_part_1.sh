@@ -23,6 +23,10 @@ sed 's/0xA0/0x50/g' files/hex.txt | sed 's/0xFF/0x7F/g'
 echo "----------------------"
 
 
+#Use the y command to transform the given input string to get the output string as shown below
+
+echo 'goal new user sit eat dinner' | sed 'y/aeiou/AEIOU/'
+
 
 
 
