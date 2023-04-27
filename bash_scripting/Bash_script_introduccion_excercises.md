@@ -83,3 +83,23 @@ esac
 - Create a match on each weekday such as Monday, Tuesday etc. using OR syntax on a single line, then a match on each weekend day (Saturday and Sunday) etc. using OR syntax on a single line.
 - Create a default match that prints out Not a day! if none of the above patterns are matched.
 - Save your script and run in the terminal window with Wednesday and Saturday to test.
+
+## 6.-Moving model results with CASE
+You are working as a data scientist in charge of analyzing some machine learning model results. The production environment moves files into a folder called model_out/ and names them model_RXX.csv where XX is a random number related to which experiment was run.
+
+Each file has the following structure (example):
+
+```
+Model Name, Accuracy, CV, Model Duration (s)
+Logistic,42,4,48
+```
+
+Your manager has told you that recent work in the organization has meant that tree-based models are to be kept in one folder and everything else deleted.
+
+Your task is to use a CASE statement to move the tree-based models (Random Forest, GBM, and XGBoost) to the tree_models/ folder, and delete all other models (KNN and Logistic).
+
+#### Instructions
+
+- Use a FOR statement to loop through (using glob expansion) files in model_out/.
+- Use a CASE statement to match on the contents of the file (we will use cat and shell-within-a-shell to get the contents to match against). It must check if the text contains a tree-based model name and move to tree_models/, otherwise delete the file.
+- Create a default match that prints out Unknown model in FILE where FILE is the filename then run your script.
