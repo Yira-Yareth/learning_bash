@@ -104,4 +104,6 @@ As seen earlier, the syntax for substitute command is s/REGEXP/REPLACEMENT/FLAGS
 ### Delete command
 To delete the filtered lines, use the d command. Recall that all input lines are printed by default
 
+### Print command
+To print the filtered lines, use the p command. But, recall that all input lines are printed by default. So, this command is typically used in combination with -n command line option, which would turn off the default printing.
 
