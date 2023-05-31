@@ -29,7 +29,24 @@ Remember that the shell can't natively handle decimal places, so it will be safe
 
 ### Instructions
 
-Create a function called return_percentage using the function-word method.
-Create a variable inside the function called percent that divides the first argument fed into the function by the second argument.
+- Create a function called return_percentage using the function-word method.
+- Create a variable inside the function called percent that divides the first argument fed into the function by the second argument.
 Return the calculated value by echoing it back.
-Call the function with the mentioned test values of 456 (the first argument) and 632 (the second argument) and echo the result.
+- Call the function with the mentioned test values of 456 (the first argument) and 632 (the second argument) and echo the result.
+
+
+## 3.- Sports analytics function
+You have been contracted back to the soccer league to help them with some sports analytics. You notice that a number of the scripts undertake aggregations, just like you did in a previous exercise. Since there is a lot of duplication of code, this is an excellent opportunity to create a single useful function that can be called at many places in the script.
+
+Your task is to create a Bash function that will take in a city name and find out how many wins they have had since recording began.
+
+Inside the main function, this script will call out to a shell-within-a-shell which is captured in a (by default, global) variable. You can then access this variable outside the function. This was the first technique discussed in the video for getting data out of a function.
+
+Most of the shell pipeline used has been done for you, though of course feel free to explore and understand what is happening here. Nothing there should be new to you!
+
+### Instructions
+
+- Create a function called get_number_wins using the function-word method.
+- Create a variable inside the function called win_stats that takes the argument fed into the function to filter the last step of the shell-pipeline presented.
+- Call the function using the city Etar.
+- Below the function call, try to access the win_stats variable created inside the function in the echo command presented.
