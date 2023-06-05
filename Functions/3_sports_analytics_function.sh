@@ -2,7 +2,7 @@
 function get_number_wins () {
 
   # Filter aggregate results by argument
-  win_stats=$(cat ~/soccer_scores.csv | cut -d "," -f2 | egrep -v 'Winner'| sort | uniq -c | egrep "$1")
+  win_stats=$(cat ~/learning_shell/data/soccer_scores.csv | cut -d "," -f2 | egrep -v 'Winner'| sort | uniq -c | egrep "$1")
 
 }
 
