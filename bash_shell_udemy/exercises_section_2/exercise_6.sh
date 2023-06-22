@@ -5,16 +5,17 @@
 # a directory, or other type of file. Also perform an ls command against the file or directory with the long listing option.
 
 
-echo "Enter the file path"
-read $FILE
-if [ -f “$FILE” ]
+
+read -p "Enter the path to a file or a directory: " FILE
+
+if [ -f $FILE ]
   then
-    echo “$FILE is a reguler file”
-elif [ -d “$FILE” ]
+    echo “${FILE} is a reguler file”
+elif [ -d $FILE ]
   then
-    echo “$FILE is a directory”
+    echo “{$FILE} is a directory”
 else
-    echo “$FILE is another type of file”
+    echo “{$FILE} is another type of file”
 fi
 ls -l $FILE
 
